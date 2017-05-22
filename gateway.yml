@@ -1,0 +1,41 @@
+eureka:
+  instance:
+    hostname: gateway
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/
+
+sidecar:
+  port: 8000
+
+server:
+  port: 4000
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+
+zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+  routes:
+    test:
+      path: /redirect/**
+      url: http://google.com
+    newsservice:
+      path: /news/**
+      serviceId: newsservice
+    userservice:
+      path: /user/**
+      serviceId: userservice
+    static:
+      path: /static/**
+
