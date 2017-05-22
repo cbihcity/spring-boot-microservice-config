@@ -30,12 +30,12 @@ zuul:
     test:
       path: /redirect/**
       url: http://google.com
-    newsservice:
-      path: /news/**
-      serviceId: newsservice
-    userservice:
-      path: /user/**
-      serviceId: userservice
+    pg-app:
+      path: /pg/**
+      serviceId: pg-app
+    mongo-app:
+      path: /mongo/**
+      serviceId: mongo-app
     static:
       path: /static/**
 

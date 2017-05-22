@@ -1,8 +1,8 @@
 server:
-  port: 9090
+  port: 8090
 eureka:
   instance:
-    hostname: userservice
+    hostname: pg-app
   client:
     registerWithEureka: true
     fetchRegistry: true
@@ -12,7 +12,6 @@ spring:
   datasource:
     url: jdbc:postgresql://postgres:5432/postgres
     username: postgres
-    password: admin
+    password: pass
   jpa:
     generate-ddl: true
-
