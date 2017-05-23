@@ -8,10 +8,31 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://192.168.99.100:8761/eureka/
+      
 spring:
+    profiles:
+        active: "dev"
+        
+---
+
+
+spring:
+    profiles: dev
+  datasource:
+    url: jdbc:postgresql://postgres:5432/postgres
+    username: postgres
+    password: pass
+  jpa:
+    generate-ddl: true
+    
+---
+
+spring:
+    profiles: test
   datasource:
     url: jdbc:postgresql://192.168.99.100:5432/postgres
     username: postgres
     password: pass
   jpa:
     generate-ddl: true
+    
