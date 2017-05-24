@@ -1,3 +1,6 @@
+spring:
+    service:
+        name: GATEWAY
 eureka:
   instance:
     hostname: gateway
