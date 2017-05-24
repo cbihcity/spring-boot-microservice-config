@@ -6,10 +6,7 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://discovery:8761/eureka/
-
-server:
-    name: GATEWAY
-      
+     
 sidecar:
   port: 8000
 
