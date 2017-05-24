@@ -28,8 +28,8 @@ zuul:
     socket-timeout-millis: 20000
   routes:
     test:
-      path: /redirect/**
-      url: http://google.com
+      path: /
+      serviceId: gateway
     pg-app:
       path: /pg/**
       serviceId: pg-app
