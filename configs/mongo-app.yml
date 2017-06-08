@@ -13,3 +13,6 @@ spring:
     mongodb:
       host: mongo-db
       port: 27017
+ribbon:
+  eureka:
+    enabled: true
